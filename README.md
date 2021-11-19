@@ -16,8 +16,11 @@
 
 运行程序
 
-```
+```sh
 pip install -r requirements.txt --user
+# report for once
+python report.py
+# report every day
 nohup ./report_every_day &
 ```
 
