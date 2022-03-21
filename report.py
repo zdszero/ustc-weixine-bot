@@ -30,8 +30,8 @@ class Reporter(object):
         if not login_success or not form or not session:
             print('Failed to login')
             return False
-        # return if report is done today
         soup = BeautifulSoup(form.text, 'html.parser')
+        # return if report is done today
         last_report_time = soup.find(
             'span', {'class': 'text-warning'}).next_sibling
         last_date = re.search(r'\d+-\d+-\d+', last_report_time).group(0)
